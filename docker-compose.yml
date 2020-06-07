@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  react:
+    build:
+      context: ./
+      dockerfile: react.dockerfile
+    container_name: react
+    ports:
+      - 3000:3000
+    working_dir: /app
+    volumes:
+      - ./app:/app
+    tty: true
+    stdin_open: true
+    command: yarn start
+
+  firebase:
+    build:
+      context: ./
+      dockerfile: firebase.dockerfile
+    container_name: firebase
+    ports:
+      - 9005:8081
+    working_dir: /app
+    volumes:
+      - ./app:/app
+    tty: true
+    stdin_open: true
+    command: /bin/sh
