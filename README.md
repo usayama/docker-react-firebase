@@ -25,6 +25,12 @@ $ docker-compose run --rm react npx create-react-app . --template typescript
 $ docker-compose up
 ```
 
+##### エラーが出て起動できなかった場合は `npm install` する
+
+```bash
+$ docker-compose run --rm react npm install
+```
+
 ## Init Firebase
 
 ##### index.htmlにFirebaseのコードを追加
