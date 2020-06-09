@@ -1,5 +1,5 @@
 # docker-react-firebase
-React + Firebaseの環境をすぐつくるやつ
+React + Firebaseの環境をすぐつくれる
 
 ## Create App
 
