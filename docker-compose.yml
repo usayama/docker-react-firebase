@@ -12,7 +12,7 @@ services:
       - ./app:/app
     tty: true
     stdin_open: true
-    command: yarn start
+    command: ash -c "npm run build && yarn start"
 
   firebase:
     build:
