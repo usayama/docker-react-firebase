@@ -12,6 +12,8 @@ services:
       - ./app:/app
     tty: true
     stdin_open: true
+    environment:
+      - REACT_APP_FIREBASE_URL=
     command: ash -c "npm run build && yarn start"
 
   firebase:
