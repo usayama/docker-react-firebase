@@ -1,4 +1,4 @@
 FROM node:lts-alpine
 
-RUN apk update && \
-    npm install firebase
+RUN apk update
+RUN npm install firebase
