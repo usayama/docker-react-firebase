@@ -12,9 +12,7 @@ services:
       - ./app:/app
     tty: true
     stdin_open: true
-    environment:
-      - REACT_APP_FIREBASE_URL=
-    command: ash -c "npm run build && yarn start"
+    command: yarn start
 
   firebase:
     build:
@@ -22,7 +20,8 @@ services:
       dockerfile: firebase.dockerfile
     container_name: firebase
     ports:
-      - 9005:8081
+      - 5000:5000
+      - 9005:9005
     working_dir: /app
     volumes:
       - ./app:/app
