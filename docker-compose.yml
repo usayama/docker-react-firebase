@@ -13,6 +13,8 @@ services:
     tty: true
     stdin_open: true
     command: yarn start
+    # 初回のみ
+    # command: ash -c 'npx create-react-app . --template typescript && npm install firebase'
 
   firebase:
     build:
