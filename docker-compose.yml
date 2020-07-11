@@ -1,9 +1,7 @@
 version: '3.8'
 services:
   create:
-    build:
-      context: ./
-      dockerfile: create.dockerfile
+    image: node:lts-alpine
     container_name: create
     working_dir: /app
     volumes:
@@ -40,7 +38,7 @@ services:
     tty: true
     stdin_open: true
     command: /bin/sh
-    
+
 volumes:
   node_modules: {}
   yarn-cache: {}
