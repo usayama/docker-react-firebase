@@ -1,14 +1,14 @@
-// const emotionPresetOptions = {}
-// const emotionBabelPreset = require("@emotion/babel-preset-css-prop").default(
-//   undefined,
-//   emotionPresetOptions
-// )
+const emotionPresetOptions = {}
+const emotionBabelPreset = require("@emotion/babel-preset-css-prop").default(
+  undefined,
+  emotionPresetOptions
+)
 module.exports = {
-  // babel: {
-  //   plugins: [
-  //     ...emotionBabelPreset.plugins
-  //   ]
-  // }
+  babel: {
+    plugins: [
+      ...emotionBabelPreset.plugins
+    ]
+  },
   externals: {
     firebase: 'firebase'
   }
