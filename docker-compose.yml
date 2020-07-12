@@ -3,8 +3,8 @@ services:
   create:
     build:
       context: ./
-      dockerfile: create.dockerfile
-    container_name: create
+      dockerfile: env.dockerfile
+    container_name: env
     working_dir: /app
     volumes:
       - ./app:/app:cached
