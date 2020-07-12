@@ -8,8 +8,5 @@ module.exports = {
     plugins: [
       ...emotionBabelPreset.plugins
     ]
-  },
-  externals: {
-    firebase: 'firebase'
   }
 }
