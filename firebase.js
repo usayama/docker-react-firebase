@@ -1,9 +1,9 @@
 import firebase from 'firebase/app'
-// import 'firebase/auth'
-// import 'firebase/database'
-// import 'firebase/firestore'
-// import 'firebase/storage'
-// import 'firebase/functions'
+import 'firebase/auth'
+import 'firebase/database'
+import 'firebase/firestore'
+import 'firebase/storage'
+import 'firebase/functions'
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
