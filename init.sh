@@ -11,7 +11,7 @@ sleep 5
 docker-compose run --rm environ yarn install
 wait
 
-sleap 5
+sleep 5
 mv firebase.js app/src && mv craco.config.js app && mv package.json app
 wait
 mv .env app && mv .env.local app
