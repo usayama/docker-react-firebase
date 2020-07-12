@@ -7,7 +7,7 @@ services:
     container_name: create
     working_dir: /app
     volumes:
-      - ./app:/app
+      - ./app:/app:cached
     tty: true
     stdin_open: true
     command: /bin/sh
