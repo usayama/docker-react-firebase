@@ -1,21 +1,21 @@
 #!/bin/sh
 set -e
 docker-compose build
-wait
+wait $!
 
 sleep 5
 docker-compose run --rm environ npx create-react-app . --template typescript
-wait
+wait $!
 
 sleep 5
 docker-compose run --rm environ yarn install
-wait
+wait $!
 
 sleep 5
 mv firebase.js app/src && mv craco.config.js app && mv package.json app
 wait
 mv .env app && mv .env.local app
-wait
+wait $!
 
 sleep 5
 docker-compose run --rm environ yarn install
