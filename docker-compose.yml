@@ -1,5 +1,17 @@
 version: '3.8'
 services:
+  create:
+    build:
+      context: ./
+      dockerfile: create.dockerfile
+    container_name: create
+    working_dir: /app
+    volumes:
+      - ./app:/app
+    tty: true
+    stdin_open: true
+    command: /bin/sh
+
   react:
     build:
       context: ./
@@ -10,8 +22,8 @@ services:
     working_dir: /app
     volumes:
       - ./app:/app:cached
-      # - node_modules:/app/node_modules
-      # - yarn-cache:/usr/local/share/.cache/yarn/v6
+      - node_modules:/app/node_modules
+      - yarn-cache:/usr/local/share/.cache/yarn/v6
     tty: true
     stdin_open: true
     command: yarn start
