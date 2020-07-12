@@ -44,4 +44,3 @@ services:
 
 volumes:
   node_modules: {}
-  yarn-cache:
