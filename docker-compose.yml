@@ -1,10 +1,10 @@
 version: '3.8'
 services:
-  create:
+  environ:
     build:
       context: ./
-      dockerfile: env.dockerfile
-    container_name: env
+      dockerfile: environ.dockerfile
+    container_name: environ
     working_dir: /app
     volumes:
       - ./app:/app:cached
