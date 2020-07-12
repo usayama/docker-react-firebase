@@ -8,6 +8,7 @@ services:
     working_dir: /app
     volumes:
       - ./app:/app:cached
+      - yarn-cache:/usr/local/share/.cache/yarn/v6
     tty: true
     stdin_open: true
     command: /bin/sh
@@ -44,3 +45,4 @@ services:
 
 volumes:
   node_modules: {}
+  yarn-cache:
