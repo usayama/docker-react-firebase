@@ -11,15 +11,17 @@ wait $!
 
 
 sleep 5
-echo 'yarnのキャッシュをクリアします'
+echo 'npmとyarnのキャッシュをクリアします'
+docker-compose run --rm environ npm cache clean
+wait
 docker-compose run --rm environ yarn cache clean
-echo 'yarnのキャッシュをクリアしました'
+echo 'npmとyarnのキャッシュをクリアしました'
 wait $!
 
 
 sleep 5
 echo 'Reactアプリを作成します'
-docker-compose run --rm environ npx create-react-app . --template typescript
+docker-compose run --rm environ npx create-react-app . --template typescript  --use-npm
 echo 'Reactアプリの作成が完了しました'
 wait $!
 
