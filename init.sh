@@ -11,11 +11,9 @@ wait $!
 
 
 sleep 5
-echo 'npmとyarnのキャッシュをクリアします'
-docker-compose run --rm environ npm cache clean
-wait
+echo 'yarnのキャッシュをクリアします'
 docker-compose run --rm environ yarn cache clean
-echo 'npmとyarnのキャッシュをクリアしました'
+echo 'yarnのキャッシュをクリアしました'
 wait $!
 
 
