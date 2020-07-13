@@ -34,7 +34,7 @@ sleep 3
 echo 'styles.cssを作成して書き込みます'
 touch app/src/styles.css
 wait
-cat << 'EOS' > app/styles.css
+cat << 'EOS' > app/src/styles.css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
