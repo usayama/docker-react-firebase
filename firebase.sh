@@ -15,7 +15,7 @@ sleep 5
 echo 'firebase.jsを作成し、内容を記述します'
 touch app/src/firebase.js
 wait
-cat <<EOS > app/src/firebase.js
+cat << 'EOS' > app/src/firebase.js
 import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/database'
@@ -51,7 +51,7 @@ sleep 5
 echo '.env.localを作成し、内容を記述します'
 touch app/.env.local
 wait
-cat <<EOS > app/.env.local
+cat << 'EOS' > app/.env.local
 REACT_APP_API_KEY=
 REACT_APP_AUTH_DOMAIN=
 REACT_APP_DATABASE_URL=
@@ -69,7 +69,7 @@ sleep 5
 echo '.envを作成し、内容を記述します'
 touch app/.env
 wait
-cat <<EOS > app/.env
+cat << 'EOS' > app/.env
 REACT_APP_API_KEY=$REACT_APP_API_KEY
 REACT_APP_AUTH_DOMAIN=$REACT_APP_AUTH_DOMAIN
 REACT_APP_DATABASE_URL=$REACT_APP_DATABASE_URL
