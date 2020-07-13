@@ -28,4 +28,10 @@ EOS
 echo 'craco.config.jsが完了しました'
 wait $!
 
+sleep 5
+echo 'package.json から react-scripts を探して craco に置換します'
+gsed -i -e 's/react-scripts start/craco start/' -e 's/react-scripts build/craco build/' -e 's/react-scripts test/craco test/' app/package.json
+echo '置換作業が完了しました'
+wait $!
+
 echo '👍すべての処理が完了しました！'
