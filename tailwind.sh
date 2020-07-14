@@ -49,6 +49,12 @@ echo '行の挿入が完了しました'
 wait $!
 
 sleep 3
+echo 'package.json から build の行を探して、書き換えます'
+gsed  -i '/"build":/c\    "build": "NODE_ENV=production npm run tailwind && craco build",' app/package.json
+echo '行の書き換えが完了しました'
+wait $!
+
+sleep 3
 echo 'TailwindのCSSファイルを作成するためのビルドをします'
 docker-compose run --rm react npm run tailwind
 echo 'TailwindのCSSファイルを作成しました'
