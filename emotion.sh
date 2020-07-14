@@ -11,7 +11,7 @@ sleep 5
 echo 'craco.config.jsを作成し、内容を記述します'
 touch app/craco.config.js
 wait
-cat <<EOS > app/craco.config.js
+cat << 'EOS' > app/craco.config.js
 const emotionPresetOptions = {}
 const emotionBabelPreset = require("@emotion/babel-preset-css-prop").default(
   undefined,
