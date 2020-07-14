@@ -2,13 +2,13 @@
 set -e
 
 echo 'パッケージをインストールします'
-docker-compose run --rm environ npm install tailwindcss postcss-cli autoprefixer
+docker-compose run --rm react npm install tailwindcss postcss-cli autoprefixer
 echo 'パッケージのインストールが完了しました'
 wait $!
 
 sleep 3
 echo 'Tailwindcssを初期化します'
-docker-compose run --rm environ npx tailwindcss init
+docker-compose run --rm react npx tailwindcss init
 echo 'Tailwindcssを初期化しました'
 wait $!
 

@@ -3,7 +3,7 @@ set -e
 echo '🚀処理を開始します'
 
 echo 'Emotion関連パッケージをインストールします'
-docker-compose run --rm environ npm install @emotion/core @craco/craco @emotion/babel-preset-css-prop
+docker-compose run --rm react npm install @emotion/core @craco/craco @emotion/babel-preset-css-prop
 echo 'Emotion関連パッケージのインストールが完了しました'
 wait $!
 

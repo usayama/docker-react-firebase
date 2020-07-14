@@ -6,7 +6,7 @@ echo '🚀処理を開始します'
 
 sleep 5
 echo 'firebaseとfirebaseuiをインストールします'
-docker-compose run --rm environ npm install firebase react-firebaseui
+docker-compose run --rm react npm install firebase react-firebaseui
 echo 'パッケージのインストールが完了しました'
 wait $!
 

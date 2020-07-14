@@ -12,28 +12,28 @@ wait $!
 
 sleep 5
 echo 'yarnのキャッシュをクリアします'
-docker-compose run --rm environ yarn cache clean
+docker-compose run --rm react yarn cache clean
 echo 'yarnのキャッシュをクリアしました'
 wait $!
 
 
 sleep 5
 echo 'Reactアプリを作成します'
-docker-compose run --rm environ npx create-react-app . --template typescript  --use-npm
+docker-compose run --rm react npx create-react-app . --template typescript  --use-npm
 echo 'Reactアプリの作成が完了しました'
 wait $!
 
 
 sleep 5
 echo 'パッケージをインストールします'
-docker-compose run --rm environ npm install
+docker-compose run --rm react npm install
 echo 'パッケージのインストールが完了しました'
 wait $!
 
 
 sleep 5
 echo 'react-router-dom をインストールします'
-docker-compose run --rm environ npm install react-router-dom @types/react-router-dom
+docker-compose run --rm react npm install react-router-dom @types/react-router-dom
 echo 'パッケージのインストールが完了しました'
 wait $!
 
