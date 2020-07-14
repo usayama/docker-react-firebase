@@ -60,4 +60,10 @@ docker-compose run --rm react npm run tailwind
 echo 'TailwindのCSSファイルを作成しました'
 wait $!
 
+sleep 3
+echo 'index.tsx から import App の行を探して、下に行を挿入します'
+gsed -i "/import App/a import './tailwind.css'" app/src/index.tsx
+echo '行の挿入が完了しました'
+wait $!
+
 echo '👍すべての処理が終了しました！'
