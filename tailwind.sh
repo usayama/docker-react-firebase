@@ -44,7 +44,7 @@ wait $!
 
 sleep 3
 echo 'package.json から build の行を探して、下に行を挿入します'
-gsed -i '/"test":/a \    "tailwind": "npx tailwindcss build src/styles.css -o src/tailwind.css",' app/package.json
+gsed -i '/"test":/a \    "tailwind": "npx tailwindcss build src/tailwind-import.css -o src/tailwind.css",' app/package.json
 echo '行の挿入が完了しました'
 wait $!
 
